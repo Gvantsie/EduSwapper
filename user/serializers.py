@@ -66,10 +66,10 @@ class MatchSerializer(serializers.ModelSerializer):
         fields = ['id', 'user1', 'user2', 'is_accepted_by_user1', 'is_accepted_by_user2']
 
 
-class MatchCreateSerializer(serializers.ModelSerializer):
+class UserMatchingSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Match
-        fields = ['user1', 'user2']
+        model = CustomUser
+        fields = ['id', 'username', 'email']
 
 
 class UserProfileDetailSerializer(serializers.ModelSerializer):

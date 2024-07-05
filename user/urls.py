@@ -6,11 +6,11 @@ from .views import UserViewSet, ProfileViewSet, MatchViewSet, InterestViewSet, S
     UserProfileDetailView
 
 router = DefaultRouter()
-router.register(r'users', UserViewSet)
-router.register(r'profiles', ProfileViewSet)
-router.register(r'matches', MatchViewSet)
-router.register(r'interests', InterestViewSet)
-router.register(r'skills', SkillViewSet)
+router.register(r'users', UserViewSet, basename='user')
+router.register(r'profiles', ProfileViewSet, basename='profile')
+router.register(r'matches', MatchViewSet, basename='match')
+router.register(r'interests', InterestViewSet, basename='interest')
+router.register(r'skills', SkillViewSet, basename='skill')
 router.register(r'register', RegistrationViewSet, basename='register')
 
 
