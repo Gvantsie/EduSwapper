@@ -26,7 +26,7 @@ class Profile(models.Model):
                                 verbose_name=_("User"))
     skills = models.ManyToManyField('Skill', related_name='users_with_skill', verbose_name=_("Skills"))
     interests = models.ManyToManyField('Interest', related_name='users_with_interest', verbose_name=_("Interests"))
-    country = models.CharField(max_length=2, choices=COUNTRY_CHOICES, blank=True, verbose_name=_("Country"))
+    country = models.CharField(max_length=2, choices=COUNTRY_CHOICES, null=True, blank=True, verbose_name=_("Country"))
 
     def __str__(self):
         return self.user.username
